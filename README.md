@@ -1,65 +1,31 @@
-# UnSe – Undo in Selection
+# UnSe Extension
 
-UnSe is a Visual Studio Code extension that provides precise undo functionality within selected text ranges. It allows us to undo changes only within their current selection, preventing accidental rollbacks of unrelated code modifications.
+This Visual Studio Code extension implements selective undo functionality for text editors. UnSe allows users to undo modifications within specific text selections without affecting other parts of the document.
 
-## ✨ Features
+## How It Works
 
-UnSe tracks edits automatically when your selection changes and stores the history for each selected range. When you need to undo changes, it only affects the text within your current selection, leaving other parts of your code untouched.
+The extension monitors text selections and maintains separate edit histories for different ranges. When a user selects text and makes changes, UnSe creates a snapshot of that specific area. The undo operation then restores only the selected region to its previous state.
 
-* Undo functionality limited to the currently selected text range
-* Automatic edit tracking when selection boundaries change
-* Prevents unintended undos outside your working area
-* Simple command palette integration with customizable keybinding
+This approach solves the common problem where developers want to revert recent changes in one part of their code without losing modifications made elsewhere in the file.
 
-## 🚀 Installation
+## Getting Started
 
-1. Clone the repository:
+Download the source code from the repository and install the required dependencies using npm. After building the extension, you can test it by opening VS Code and pressing F5 to launch a new window with the extension loaded.
 
 ```bash
 git clone https://github.com/Eternalynx04/UnSe.git
 cd UnSe
-```
-
-2. Install dependencies:
-
-```bash
 npm install
-```
-
-3. Build the extension:
-
-```bash
 npm run compile
 ```
 
-4. Open in VS Code and press `F5` to launch the Extension Development Host.
+## Using the Extension
 
-## 🛠 Usage
+Select text in your editor, make modifications, then activate the undo command to revert only the selected area. The extension provides a command called "Undo in Selection" accessible through the Command Palette, with a default keyboard shortcut of Ctrl+Alt+Z.
 
-1. Select any text in your editor
-2. Make changes within that selected range
-3. Use one of these methods to undo within the selection:
+The extension registers the following command:
+- `unse.undo` - Reverts the last change within the current selection (Ctrl+Alt+Z)
 
-   * Open Command Palette and search for **"Undo in Selection"**
-   * Use the default keybinding: `Ctrl + Alt + Z`
+## Development Notes
 
-## 💡 Commands
-
-| Command     | Description                               | Default Keybinding |
-| ----------- | ----------------------------------------- | ------------------ |
-| `unse.undo` | Undo the last change within the selection | `Ctrl + Alt + Z`   |
-
-## 🧪 Development
-
-```bash
-npm run watch
-```
-
-This will automatically rebuild the extension when you make changes to the source code.
-
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
+Run `npm run watch` to enable automatic compilation during development. The extension source code follows standard VS Code extension patterns and can be modified to adjust the undo behavior or add additional features.
