@@ -1,0 +1,33 @@
+{
+  "name": "unse",
+  "displayName": "UnSe",
+  "description": "Undo only within selection",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": ["onCommand:unse.undo"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "unse.undo",
+        "title": "Undo in Selection"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "unse.undo",
+        "key": "ctrl+alt+z",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/vscode": "^1.80.0"
+  }
+}
