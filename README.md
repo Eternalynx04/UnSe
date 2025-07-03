@@ -1,15 +1,15 @@
 # UnSe – Undo in Selection
 
-UnSe is a Visual Studio Code extension that provides precise undo functionality within selected text ranges. It allows developers to undo changes only within their current selection, preventing accidental rollbacks of unrelated code modifications.
+UnSe is a Visual Studio Code extension that provides precise undo functionality within selected text ranges. It allows us to undo changes only within their current selection, preventing accidental rollbacks of unrelated code modifications.
 
 ## ✨ Features
 
 UnSe tracks edits automatically when your selection changes and stores the history for each selected range. When you need to undo changes, it only affects the text within your current selection, leaving other parts of your code untouched.
 
-* ⏪ Undo functionality limited to the currently selected text range
-* 🔒 Automatic edit tracking when selection boundaries change
-* 🧠 Prevents unintended undos outside your working area
-* 🎯 Simple command palette integration with customizable keybinding
+* Undo functionality limited to the currently selected text range
+* Automatic edit tracking when selection boundaries change
+* Prevents unintended undos outside your working area
+* Simple command palette integration with customizable keybinding
 
 ## 🚀 Installation
 
@@ -51,17 +51,11 @@ npm run compile
 
 ## 🧪 Development
 
-To work on the extension:
-
 ```bash
 npm run watch
 ```
 
 This will automatically rebuild the extension when you make changes to the source code.
-
-## 🤝 Contributing
-
-Contributions are welcome. Please fork the repository and submit pull requests for any improvements or bug fixes.
 
 ## 📝 License
 
