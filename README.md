@@ -1,71 +1,66 @@
-# unse README
+# UnSe – Undo in Selection
 
-This is the README for your extension "unse". After writing up a brief description, we recommend including the following sections.
+UnSe is a lightweight Visual Studio Code extension that enables undo functionality only within the current selection. Ideal for developers who want more granular control over edits without rolling back unrelated changes.
 
-## Features
+## ✨ Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- ⏪ Undo only the last change within the currently selected range
+- 🔒 Avoid unintended undos outside your working scope
+- 🧠 Automatically tracks and stores edits when selection changes
+- 🎯 Trigger via Command Palette or `Ctrl + Alt + Z` (customizable)
 
-For example if there is an image subfolder under your extension project workspace:
+## 🚀 Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
+### 1. Clone and Install
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+```bash
+git clone https://github.com/Eternalynx04/UnSe.git
+cd UnSe
+npm install
+```
 
-## Requirements
+### 2. Build the Extension
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```bash
+npm run compile
+```
 
-## Extension Settings
+### 3. Launch in VS Code
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```bash
+code .
+```
 
-For example:
+Then press `F5` to open a new Extension Development Host with UnSe enabled.
 
-This extension contributes the following settings:
+## 🛠 Usage
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. Select any text in the editor
+2. Make changes within that selection
+3. Undo only within the selected range by:
+   - Opening Command Palette → "Undo in Selection"
+   - Or using the default keybinding: `Ctrl + Alt + Z`
 
-## Known Issues
+## 💡 Extension Commands
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+| Command | Description | Default Keybinding |
+|---------|-------------|-------------------|
+| `unse.undo` | Undo the last change in selection | `Ctrl + Alt + Z` |
 
-## Release Notes
+## 🧪 Development
 
-Users appreciate release notes as you update your extension.
+```bash
+npm run watch  # to auto-rebuild on changes
+```
 
-### 1.0.0
+## 🤝 Contributing
 
-Initial release of ...
+Pull requests are welcome! Feel free to fork this repository and submit improvements or features.
 
-### 1.0.1
+## 📝 License
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+This project is licensed under the MIT License.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Made with ❤️ by Sumit 
